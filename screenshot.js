@@ -1,3 +1,4 @@
+const path = require('node:path');
 const puppeteer = require('puppeteer');         // Require Puppeteer module
 const myArgs = process.argv.slice(2);
 
@@ -14,14 +15,14 @@ if (myArgs.length < 1) {
    url = myArgs[0]
    userwidth = 2500;
    userheight = 2250;
-   outfile = "./screenshot.png";
+   outfile = path.join("output", "./screenshot.png");
 
 } else {
 
   url = myArgs[0];
   userwidth = parseInt(myArgs[1],10);
   userheight = parseInt(myArgs[2],10);
-  outfile = ( myArgs.length == 4 ) ? myArgs[3] : "./screenshot.png";
+  outfile = ( myArgs.length == 4 ) ? myArgs[3] : path.join("output", "./screenshot.png");
 
 }
 
