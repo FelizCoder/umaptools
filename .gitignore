@@ -2,3 +2,7 @@
 *.json
 *.umap.txt
 
+!package.json
+node_modules/
+
+output/*.png
