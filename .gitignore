@@ -1,8 +1,13 @@
+# Generated files
 *.umap
 *.json
 *.umap.txt
+output/*.png
 
+# Node Dependencies
 !package.json
 node_modules/
 
-output/*.png
+# Python
+.mypy_cache/
+.venv/
